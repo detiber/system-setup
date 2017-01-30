@@ -47,75 +47,138 @@ github_repos:
   - name: upstream
     org: kubernetes-incubator
   branches: []
-
-
-git_repos:
-- path: git/github/conference_talks/ansible_fest_2016
-  repo: 'git@github.com:detiber/ansible_fest_2016.git'
-- path: git/github/k8s/contrib
-  repo: 'git@github.com:detiber/contrib.git'
-  upstream: 'git@github.com:kubernetes/contrib.git'
-- path: git/github/keynote_demos/2015/demo-ansible
-  repo: 'git@github.com:detiber/demo-ansible.git'
-  upstream: 'git@github.com:2015-Middleware-Keynote/demo-ansible.git'
-- path: git/github/keynote_demos/2015/hexboard
-  repo: 'git@github.com:detiber/hexboard.git'
-  upstream: 'git@github.com:2015-Middleware-Keynote/hexboard.git'
-- path: git/github/keynote_demos/2016/demo-env-ansible
-  repo: 'git@github.com:detiber/demo-env-ansible.git'
-  upstream: 'git@github.com:Red-Hat-Middleware-Keynote/demo-env-ansible.git'
-- path: git/github/keynote_demos/2016/che-proxy
-  repo: 'git@github.com:Red-Hat-Middleware-Keynote/che-proxy.git'
-- path: git/github/keynote_demos/2016/cicd
-  repo: 'git@github.com:detiber/cicd.git'
-  upstream: 'git@github.com:Red-Hat-Middleware-Keynote/cicd.git'
-- path: git/github/keynote_demos/2016/cicd-templates
-  repo: 'git@github.com:detiber/cicd-templates.git'
-  upstream: 'git@github.com:Red-Hat-Middleware-Keynote/cicd-templates.git'
-- path: git/github/keynote_demos/2016/game-mechanics-server
-  repo: 'git@github.com:Red-Hat-Middleware-Keynote/game-mechanics-server.git'
-- path: git/github/keynote_demos/2016/mobile-app
-  repo: 'git@github.com:detiber/mobile-app.git'
-  upstream: 'git@github.com:Red-Hat-Middleware-Keynote/mobile-app.git'
-- path: git/github/keynote_demos/2016/nginx-proxy
-  repo: 'git@github.com:Red-Hat-Middleware-Keynote/nginx-proxy.git'
-- path: git/github/keynote_demos/2016/jenkins-s2i-config
-  repo: 'git@github.com:detiber/jenkins-s2i-config.git'
-  upstream: 'git@github.com:Red-Hat-Middleware-Keynote/jenkins-s2i-config.git'
-- path: git/github/keynote_demos/2016/s2i-nginx
-  repo: 'git@github.com:detiber/s2i-nginx.git'
-- path: git/github/keynote_demos/2016/s2i-nginx-nodejs
-  repo: 'git@github.com:detiber/s2i-nginx-nodejs.git'
-- path: git/github/keynote_demos/2016/score-server
-  repo: 'git@github.com:detiber/score-server.git'
-  upstream: 'git@github.com:Red-Hat-Middleware-Keynote/score-server.git'
-- path: git/github/keynote_demos/2016/templates
-  repo: 'git@github.com:detiber/templates.git'
-  upstream: 'git@github.com:Red-Hat-Middleware-Keynote/templates.git'
-- path: git/github/openshift/aos-ansible
-  repo: 'git@github.com:detiber/aos-ansible.git'
-  upstream: 'git@github.com:openshift/aos-ansible.git'
-- path: git/github/openshift/openshift-ansible
-  repo: 'git@github.com:detiber/openshift-ansible.git'
-  upstream: 'git@github.com:openshift/openshift-ansible.git'
-- path: git/github/openshift/openshift-ansible-contrib
-  repo: 'git@github.com:detiber/openshift-ansible-contrib.git'
-  upstream: 'git@github.com:openshift/openshift-ansible-contrib.git'
-- path: git/github/openshift/openshift-docs
-  repo: 'git@github.com:detiber/openshift-docs.git'
-  upstream: 'git@github.com:openshift/openshift-docs.git'
-- path: git/github/openshift/origin
-  repo: 'git@github.com:detiber/origin.git'
-  upstream: 'git@github.com:openshift/origin.git'
-- path: git/github/openshift/ose
-  repo: 'git@github.com:detiber/ose.git'
-  upstream: 'git@github.com:openshift/ose.git'
-- path: git/github/openshift/online
-  repo: 'git@github.com:detiber/online.git'
-  upstream: 'git@github.com:openshift/online.git'
-- path: git/github/openshift/openshift-tools
-  repo: 'git@github.com:detiber/openshift-tools.git'
-  upstream: 'git@github.com:openshift/openshift-tools.git'
-- path: git/github/openshift/openshift-ansible-ops
-  repo: 'git@github.com:detiber/openshift-ansible-ops.git'
-  upstream: 'git@github.com:openshift/openshift-ansible-ops.git'
+- name: ansible_fest_2016
+  subdir: conference_talks
+  remotes: []
+  branches: []
+- name: demo-ansible
+  subdir: keynote_demos/2015
+  remotes:
+  - name: upstream
+    org: 2015-Middleware-Keynote
+  branches: []
+- name: hexboard
+  subdir: keynote_demos/2015
+  remotes:
+  - name: upstream
+    org: 2015-Middleware-Keynote
+  branches: []
+- name: demo-env-ansible
+  subdir: keynote_demos/2016
+  remotes:
+  - name: upstream
+    org: Red-Hat-Middleware-Keynote
+  branches: []
+- name: cicd
+  subdir: keynote_demos/2016
+  remotes:
+  - name: upstream
+    org: Red-Hat-Middleware-Keynote
+  branches: []
+- name: cicd-templates
+  subdir: keynote_demos/2016
+  remotes:
+  - name: upstream
+    org: Red-Hat-Middleware-Keynote
+  branches: []
+- name: mobile-app
+  subdir: keynote_demos/2016
+  remotes:
+  - name: upstream
+    org: Red-Hat-Middleware-Keynote
+  branches: []
+- name: openshift-jenkins-s2i-config
+  subdir: keynote_demos/2016
+  remotes:
+  - name: upstream
+    org: Red-Hat-Middleware-Keynote
+  branches: []
+- name: score-server
+  subdir: keynote_demos/2016
+  remotes:
+  - name: upstream
+    org: Red-Hat-Middleware-Keynote
+  branches: []
+- name: templates
+  subdir: keynote_demos/2016
+  remotes:
+  - name: upstream
+    org: Red-Hat-Middleware-Keynote
+  branches: []
+- name: che-proxy
+  origin: Red-Hat-Middleware-Keynote
+  subdir: keynote_demos/2016
+  remotes: []
+  branches: []
+- name: game-mechanics-server
+  origin: Red-Hat-Middleware-Keynote
+  subdir: keynote_demos/2016
+  remotes: []
+  branches: []
+- name: nginx-proxy
+  origin: Red-Hat-Middleware-Keynote
+  subdir: keynote_demos/2016
+  remotes: []
+  branches: []
+- name: s2i-nginx
+  subdir: keynote_demos/2016
+  remotes: []
+  branches: []
+- name: s2i-nginx-nodejs
+  subdir: keynote_demos/2016
+  remotes: []
+  branches: []
+- name: aos-ansible
+  subdir: openshift
+  remotes:
+  - name: upstream
+    org: openshift
+  branches: []
+- name: openshift-ansible
+  subdir: openshift
+  remotes:
+  - name: upstream
+    org: openshift
+  branches: []
+- name: openshift-ansible-contrib
+  subdir: openshift
+  remotes:
+  - name: upstream
+    org: openshift
+  branches: []
+- name: openshift-docs
+  subdir: openshift
+  remotes:
+  - name: upstream
+    org: openshift
+  branches: []
+- name: origin
+  subdir: openshift
+  remotes:
+  - name: upstream
+    org: openshift
+  branches: []
+- name: ose
+  subdir: openshift
+  remotes:
+  - name: upstream
+    org: openshift
+  branches: []
+- name: online
+  subdir: openshift
+  remotes:
+  - name: upstream
+    org: openshift
+  branches: []
+- name: openshift-tools
+  subdir: openshift
+  remotes:
+  - name: upstream
+    org: openshift
+  branches: []
+- name: openshift-ansible-ops
+  subdir: openshift
+  remotes:
+  - name: upstream
+    org: openshift
+  branches: []

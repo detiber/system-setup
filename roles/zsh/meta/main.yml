@@ -1,0 +1,11 @@
+galaxy_info:
+  author: Jason DeTiberus
+  description: zsh config
+  license: Apache License, version 2.0
+  min_ansible_version: 2.2
+  platforms:
+  - name: Fedora
+    versions:
+    - 25
+  galaxy_tags: []
+dependencies: []

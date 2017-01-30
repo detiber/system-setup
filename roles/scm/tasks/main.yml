@@ -32,8 +32,6 @@
     update: no
   with_items: "{{ github_repos }}"
 
-- debug: var=github_repos
-
 - name: Configure remote urls
   git_config:
     name: "remote.{{ item.1.name }}.url"
