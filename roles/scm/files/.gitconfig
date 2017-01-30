@@ -1,0 +1,6 @@
+[user]
+	name = Jason DeTiberus
+	email = jdetiber@redhat.com
+	signingkey = CBD7D7A4B41437BC
+[commit]
+	gpgsign = true
