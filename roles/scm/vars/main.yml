@@ -13,6 +13,12 @@ github_repos:
     remote: upstream
   - name: devel
     remote: upstream
+- name: moto
+  subdir: ansible
+  remotes:
+  - name: upstream
+    org: spulec
+  branches: []
 - name: molecule
   subdir: ansible
   remotes:
