@@ -22,5 +22,5 @@
   - name: Change shell to zsh
     user:
       name: jdetiber
-      shell: /usr/bin/zsh 
+      shell: /usr/bin/zsh
       state: present
