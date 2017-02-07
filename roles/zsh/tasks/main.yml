@@ -14,3 +14,10 @@
     group: jdetiber
     mode: 0660
 
+- name: zplug
+  unarchive:
+    src: zplug.tgz
+    dest: /home/jdetiber/
+    creates: /home/jdetiber/.zplug
+    owner: jdetiber
+    group: jdetiber
