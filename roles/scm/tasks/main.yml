@@ -16,58 +16,58 @@
     group: jdetiber
     mode: 0660
 
-- name: Create parent directories
-  file:
-    path: "{{ github_repo_root }}/{{ item.subdir ~ '/' if 'subdir' in item else '' }}"
-    owner: jdetiber
-    group: jdetiber
-    state: directory
-  with_items: "{{ github_repos }}"
-
-- name: Create repos if not already present
-  git:
-    dest: "{{ github_repo_root }}/{{ item.subdir ~ '/' if 'subdir' in item else '' }}{{ item.name }}"
-    repo: "git@github.com:{{ item.origin | default('detiber') }}"
-    remote: origin
-    update: no
-  with_items: "{{ github_repos }}"
-
-- name: Configure remote urls
-  git_config:
-    name: "remote.{{ item.1.name }}.url"
-    value: "git@github.com:{{ item.1.org }}/{{ item.0.name }}.git"
-    repo: "{{ github_repo_root }}/{{ item.0.subdir ~ '/' if 'subdir' in item.0 else '' }}{{ item.0.name }}"
-    scope: local
-  with_subelements:
-  - "{{ github_repos }}"
-  - remotes
-
-- name: Configure remote fetch
-  git_config:
-    name: "remote.{{ item.1.name }}.fetch"
-    value: "+refs/heads/*:refs/remotes/{{ item.1.name }}/*"
-    repo: "{{ github_repo_root }}/{{ item.0.subdir ~ '/' if 'subdir' in item.0 else '' }}{{ item.0.name }}"
-    scope: local
-  with_subelements:
-  - "{{ github_repos }}"
-  - remotes
-
-- name: Configure branch remotes
-  git_config:
-    name: "branch.{{ item.1.name }}.remote"
-    value: "{{ item.1.remote }}"
-    repo: "{{ github_repo_root }}/{{ item.0.subdir ~ '/' if 'subdir' in item.0 else '' }}{{ item.0.name }}"
-    scope: local
-  with_subelements:
-  - "{{ github_repos }}"
-  - branches
-
-- name: Configure branch merge
-  git_config:
-    name: "branch.{{ item.1.name }}.merge"
-    value: "refs/heads/{{ item.1.name }}"
-    repo: "{{ github_repo_root }}/{{ item.0.subdir ~ '/' if 'subdir' in item.0 else '' }}{{ item.0.name }}"
-    scope: local
-  with_subelements:
-  - "{{ github_repos }}"
-  - branches
+#- name: Create parent directories
+#  file:
+#    path: "{{ github_repo_root }}/{{ item.subdir ~ '/' if 'subdir' in item else '' }}"
+#    owner: jdetiber
+#    group: jdetiber
+#    state: directory
+#  with_items: "{{ github_repos }}"
+#
+#- name: Create repos if not already present
+#  git:
+#    dest: "{{ github_repo_root }}/{{ item.subdir ~ '/' if 'subdir' in item else '' }}{{ item.name }}"
+#    repo: "git@github.com:{{ item.origin | default('detiber') }}"
+#    remote: origin
+#    update: no
+#  with_items: "{{ github_repos }}"
+#
+#- name: Configure remote urls
+#  git_config:
+#    name: "remote.{{ item.1.name }}.url"
+#    value: "git@github.com:{{ item.1.org }}/{{ item.0.name }}.git"
+#    repo: "{{ github_repo_root }}/{{ item.0.subdir ~ '/' if 'subdir' in item.0 else '' }}{{ item.0.name }}"
+#    scope: local
+#  with_subelements:
+#  - "{{ github_repos }}"
+#  - remotes
+#
+#- name: Configure remote fetch
+#  git_config:
+#    name: "remote.{{ item.1.name }}.fetch"
+#    value: "+refs/heads/*:refs/remotes/{{ item.1.name }}/*"
+#    repo: "{{ github_repo_root }}/{{ item.0.subdir ~ '/' if 'subdir' in item.0 else '' }}{{ item.0.name }}"
+#    scope: local
+#  with_subelements:
+#  - "{{ github_repos }}"
+#  - remotes
+#
+#- name: Configure branch remotes
+#  git_config:
+#    name: "branch.{{ item.1.name }}.remote"
+#    value: "{{ item.1.remote }}"
+#    repo: "{{ github_repo_root }}/{{ item.0.subdir ~ '/' if 'subdir' in item.0 else '' }}{{ item.0.name }}"
+#    scope: local
+#  with_subelements:
+#  - "{{ github_repos }}"
+#  - branches
+#
+#- name: Configure branch merge
+#  git_config:
+#    name: "branch.{{ item.1.name }}.merge"
+#    value: "refs/heads/{{ item.1.name }}"
+#    repo: "{{ github_repo_root }}/{{ item.0.subdir ~ '/' if 'subdir' in item.0 else '' }}{{ item.0.name }}"
+#    scope: local
+#  with_subelements:
+#  - "{{ github_repos }}"
+#  - branches

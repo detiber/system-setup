@@ -2,6 +2,10 @@
 
 This repository is used to recreate my personal development environment.
 
+Requires the following packages prior to use:
+ansible
+python-dnf
+
 Possibly complete:
 - scm
   repos:
@@ -13,6 +17,7 @@ Possibly complete:
 
 In progress:
 - zsh
+- neovim
 
 TODO:
-- nvim, libvirt, docker, lvm config, weechat, ???
+libvirt, docker, lvm config, weechat, ???

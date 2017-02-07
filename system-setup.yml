@@ -1,7 +1,25 @@
 ---
 - hosts: localhost
-  become: no
+  become: yes
   connection: local
+  pre_tasks:
+  # TODO: yum repos
+  # TODO: repo GPG keys
+  - name: Install required packages
+    dnf:
+      name: "{{ item }}"
+      state: present
+    with_items:
+    - SpiderOakBlue
+    - redhat-internal-cert-install
+    - redhat-internal-NetworkManager-openvpn-profiles
+    - libselinux-python
   roles:
   - scm
   - zsh
+  post_tasks:
+  - name: Change shell to zsh
+    user:
+      name: jdetiber
+      shell: /usr/bin/zsh 
+      state: present
