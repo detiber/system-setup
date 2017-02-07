@@ -5,3 +5,11 @@
     state: present
   with_items:
   - neovim
+
+- name: Neovim Config
+  unarchive:
+    src: zplug.tgz
+    dest: /home/jdetiber/.config
+    creates: /home/jdetiber/.config/nvim
+    owner: jdetiber
+    group: jdetiber
