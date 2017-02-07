@@ -17,6 +17,7 @@
   roles:
   - scm
   - zsh
+  - neovim
   post_tasks:
   - name: Change shell to zsh
     user:
