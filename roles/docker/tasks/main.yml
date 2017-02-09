@@ -1,0 +1,35 @@
+---
+- name: Install packages
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+  - docker
+  become: yes
+
+- name: docker-storage-setup
+  copy:
+    src: docker-storage-setup
+    dest: /etc/sysconfig/docker-storage-setup
+  become: yes
+
+- name: Start and enable docker service
+  systemd:
+    name: docker
+    state: started
+    enabled: yes
+  become: yes
+
+- name: Create docker group
+  group:
+    name: docker
+    state: present
+    system: yes
+  become: yes
+
+- name: Ensure user is in docker group
+  user:
+    name: jdetiber
+    groups: docker
+    append: yes
+  become: yes

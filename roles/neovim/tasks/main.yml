@@ -5,6 +5,7 @@
     state: present
   with_items:
   - neovim
+  become: yes
 
 - name: Neovim Config
   unarchive:

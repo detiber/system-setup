@@ -5,6 +5,7 @@
     state: present
   with_items:
   - zsh
+  become: yes
 
 - name: .zshrc
   copy:

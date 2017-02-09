@@ -57,83 +57,83 @@ github_repos:
   subdir: conference_talks
   remotes: []
   branches: []
-- name: demo-ansible
-  subdir: keynote_demos/2015
-  remotes:
-  - name: upstream
-    org: 2015-Middleware-Keynote
-  branches: []
-- name: hexboard
-  subdir: keynote_demos/2015
-  remotes:
-  - name: upstream
-    org: 2015-Middleware-Keynote
-  branches: []
-- name: demo-env-ansible
-  subdir: keynote_demos/2016
-  remotes:
-  - name: upstream
-    org: Red-Hat-Middleware-Keynote
-  branches: []
-- name: cicd
-  subdir: keynote_demos/2016
-  remotes:
-  - name: upstream
-    org: Red-Hat-Middleware-Keynote
-  branches: []
-- name: cicd-templates
-  subdir: keynote_demos/2016
-  remotes:
-  - name: upstream
-    org: Red-Hat-Middleware-Keynote
-  branches: []
-- name: mobile-app
-  subdir: keynote_demos/2016
-  remotes:
-  - name: upstream
-    org: Red-Hat-Middleware-Keynote
-  branches: []
-- name: openshift-jenkins-s2i-config
-  subdir: keynote_demos/2016
-  remotes:
-  - name: upstream
-    org: Red-Hat-Middleware-Keynote
-  branches: []
-- name: score-server
-  subdir: keynote_demos/2016
-  remotes:
-  - name: upstream
-    org: Red-Hat-Middleware-Keynote
-  branches: []
-- name: templates
-  subdir: keynote_demos/2016
-  remotes:
-  - name: upstream
-    org: Red-Hat-Middleware-Keynote
-  branches: []
-- name: che-proxy
-  origin: Red-Hat-Middleware-Keynote
-  subdir: keynote_demos/2016
-  remotes: []
-  branches: []
-- name: game-mechanics-server
-  origin: Red-Hat-Middleware-Keynote
-  subdir: keynote_demos/2016
-  remotes: []
-  branches: []
-- name: nginx-proxy
-  origin: Red-Hat-Middleware-Keynote
-  subdir: keynote_demos/2016
-  remotes: []
-  branches: []
-- name: s2i-nginx
-  subdir: keynote_demos/2016
-  remotes: []
-  branches: []
-- name: s2i-nginx-nodejs
-  subdir: keynote_demos/2016
-  remotes: []
-  branches: []
+#- name: demo-ansible
+#  subdir: keynote_demos/2015
+#  remotes:
+#  - name: upstream
+#    org: 2015-Middleware-Keynote
+#  branches: []
+#- name: hexboard
+#  subdir: keynote_demos/2015
+#  remotes:
+#  - name: upstream
+#    org: 2015-Middleware-Keynote
+#  branches: []
+#- name: demo-env-ansible
+#  subdir: keynote_demos/2016
+#  remotes:
+#  - name: upstream
+#    org: Red-Hat-Middleware-Keynote
+#  branches: []
+#- name: cicd
+#  subdir: keynote_demos/2016
+#  remotes:
+#  - name: upstream
+#    org: Red-Hat-Middleware-Keynote
+#  branches: []
+#- name: cicd-templates
+#  subdir: keynote_demos/2016
+#  remotes:
+#  - name: upstream
+#    org: Red-Hat-Middleware-Keynote
+#  branches: []
+#- name: mobile-app
+#  subdir: keynote_demos/2016
+#  remotes:
+#  - name: upstream
+#    org: Red-Hat-Middleware-Keynote
+#  branches: []
+#- name: openshift-jenkins-s2i-config
+#  subdir: keynote_demos/2016
+#  remotes:
+#  - name: upstream
+#    org: Red-Hat-Middleware-Keynote
+#  branches: []
+#- name: score-server
+#  subdir: keynote_demos/2016
+#  remotes:
+#  - name: upstream
+#    org: Red-Hat-Middleware-Keynote
+#  branches: []
+#- name: templates
+#  subdir: keynote_demos/2016
+#  remotes:
+#  - name: upstream
+#    org: Red-Hat-Middleware-Keynote
+#  branches: []
+#- name: che-proxy
+#  origin: Red-Hat-Middleware-Keynote
+#  subdir: keynote_demos/2016
+#  remotes: []
+#  branches: []
+#- name: game-mechanics-server
+#  origin: Red-Hat-Middleware-Keynote
+#  subdir: keynote_demos/2016
+#  remotes: []
+#  branches: []
+#- name: nginx-proxy
+#  origin: Red-Hat-Middleware-Keynote
+#  subdir: keynote_demos/2016
+#  remotes: []
+#  branches: []
+#- name: s2i-nginx
+#  subdir: keynote_demos/2016
+#  remotes: []
+#  branches: []
+#- name: s2i-nginx-nodejs
+#  subdir: keynote_demos/2016
+#  remotes: []
+#  branches: []
 - name: aos-ansible
   subdir: openshift
   remotes:

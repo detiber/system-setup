@@ -1,6 +1,6 @@
 ---
 - hosts: localhost
-  become: yes
+  become: no
   connection: local
   pre_tasks:
   # TODO: yum repos
@@ -15,10 +15,19 @@
     - redhat-internal-NetworkManager-openvpn-profiles
     - libselinux-python
     - terminator
+    - python3-tox
+    - libffi
+    - libffi-devel
+    - openssl-devel
+    - redhat-rpm-config
+    - python-devel
+    - python3-devel
+    become: yes
   roles:
   - scm
   - zsh
   - neovim
+  - docker
   post_tasks:
   - name: Change shell to zsh
     user:
